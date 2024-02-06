@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDSU ESports Team</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to SDSU ESports Team</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="summary.html">Summary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>Welcome to the official website of the San Diego State University ESports Team!</p>
+        <!-- Add more content here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
+    </footer>
+</body>
+</html>
