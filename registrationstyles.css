@@ -1,0 +1,38 @@
+header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 1px;
+  }
+
+  /* The navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: rgba(247, 40, 40, 0.563);
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Links - change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+h1{
+    text-align: center;
+    color: red;
+}
+h2{
+    text-align: center;
+    
+}
+form{
+    text-align: center;
+}
