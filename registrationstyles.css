@@ -7,7 +7,7 @@ header {
   /* The navbar container */
 .navbar {
     overflow: hidden;
-    background-color: rgba(247, 40, 40, 0.563);
+    background-color: rgba(247, 40, 40, 0.8);
   }
   
   /* Navbar links */
@@ -27,7 +27,7 @@ header {
   }
 h1{
     text-align: center;
-    color: red;
+    color: black;
 }
 h2{
     text-align: center;
