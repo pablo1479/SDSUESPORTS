@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Set width to auto to fit content */
+    margin: 20px auto; /* Center the button horizontally with auto margins */
+    display: block; /* Change display to block for full width */
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.team-member {
+    position: relative;
+}
+
+.team-member input[type="text"] {
+    width: calc(100% - 100px);
+}
+
+.team-member button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f44336;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.team-member button:hover {
+    background-color: #d32f2f;
+}
+
+.add-remove-buttons {
+    margin-top: 20px; /* Increased margin-top for more space */
+    margin-bottom: 20px; /* Added margin-bottom for spacing */
+    display: flex;
+    justify-content: space-between; /* Keep buttons evenly spaced */
+}
+
+.add-remove-buttons button {
+    width: 48%;
+}
