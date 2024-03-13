@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stats {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.game-select {
+    margin-bottom: 10px;
+    width: 75%; 
+}
+
+.stats p {
+    display: inline-block; 
+    margin-right: 20px; 
+}
+
+.game-select,
+.stats p {
+    margin: 0;
+}
+
+.game-select option {
+    background-color: #fff;
+    color: #000;
+}
+
+.game-select:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+}
+
+.game-select:focus {
+    outline: none;
+}

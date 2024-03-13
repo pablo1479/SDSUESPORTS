@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDSU eSports Team Application</title>
+    <link rel="stylesheet" href="applicationstyles.css">
+</head>
+<body>
+    <header>
+        <h1>SDSU eSports Application Page</h1>
+        <nav>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="registration.html">Registration</a>
+                <a href="application.html">Application</a>
+                <a href="stats.html">Statistics</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <form action="submit_application.php" method="POST">
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName" name="teamName" required>
+
+            <label for="teamLeaderName">Team Leader Name:</label>
+            <input type="text" id="teamLeaderName" name="teamLeaderName" required>
+
+            <label for="teamLeaderEmail">Team Leader Email:</label>
+            <input type="email" id="teamLeaderEmail" name="teamLeaderEmail" required>
+
+            <label for="gamesInterested">Games Interested In:</label>
+            <input type="text" id="gamesInterested" name="gamesInterested" required>
+
+            <label for="teamMembers">Team Members:</label>
+            <div id="teamMembers">
+                <div class="team-member">
+                    <input type="text" name="teammateName[]" placeholder="Teammate Name">
+                    <button type="button" onclick="removeMember(this)">Remove</button>
+                </div>
+            </div>
+            <button type="button" onclick="addMember()">Add Member</button>
+
+            <div class="add-remove-buttons">
+                <!-- Remove button container -->
+            </div>
+
+            <input type="submit" value="Submit Application"> <!-- Moved outside of the .add-remove-buttons container -->
+        </form>
+    </div>
+
+    <!-- JavaScript to add/remove team members -->
+    <script>
+        function addMember() {
+            var container = document.getElementById("teamMembers");
+            var memberDiv = document.createElement("div");
+            memberDiv.className = "team-member";
+            memberDiv.innerHTML = '<input type="text" name="teammateName[]" placeholder="Teammate Name">' +
+                                  '<button type="button" onclick="removeMember(this)">Remove</button>';
+            container.appendChild(memberDiv);
+        }
+
+        function removeMember(button) {
+            button.parentNode.remove();
+        }
+    </script>
+</body>
+</html>

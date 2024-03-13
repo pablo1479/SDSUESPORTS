@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Team Statistics</title>
+    <link rel="stylesheet" href="statsstyles.css">
+</head>
+<body>
+    <header>
+        <h1>SDSU eSports Application Page</h1>
+        <nav>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="registration.html">Registration</a>
+                <a href="application.html">Application</a>
+                <a href="stats.html">Statistics</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="team">
+        <h2>Manshawdies</h2>
+        <label for="manshawdies-game-select">Select a Game:</label>
+        <select id="manshawdies-game-select" class="game-select" data-team="manshawdies">
+            <option value="game1">Valorant</option>
+            <option value="game2">Overwatch 2</option>
+            
+        </select>
+        <div id="manshawdies-stats" class="stats">
+            
+        </div>
+    </div>
+
+    <div class="team">
+        <h2>Teh's Angels</h2>
+        <label for="tehs-angels-game-select">Select a Game:</label>
+        <select id="tehs-angels-game-select" class="game-select" data-team="tehs-angels">
+            <option value="game1">League of Legends</option>
+            <option value="game2">Smite</option>
+            
+        </select>
+        <div id="tehs-angels-stats" class="stats">
+            
+        </div>
+    </div>
+
+    <div class="team">
+        <h2>Doganators</h2>
+        <label for="doganators-game-select">Select a Game:</label>
+        <select id="doganators-game-select" class="game-select" data-team="doganators">
+            <option value="game1">Forza Horizon</option>
+            <option value="game2">Gran Turismo</option>
+            
+        </select>
+        <div id="doganators-stats" class="stats">
+            
+        </div>
+    </div>
+
+    <div class="team">
+        <h2>Astrofees</h2>
+        <label for="astrofees-game-select">Select a Game:</label>
+        <select id="astrofees-game-select" class="game-select" data-team="astrofees">
+            <option value="game1">Math is Fun</option>
+            <option value="game2">Poptropica</option>
+            
+        </select>
+        <div id="astrofees-stats" class="stats">
+            
+        </div>
+    </div>
+
+    <script>
+        const teamStats = {
+            manshawdies: {
+                game1: { wins: 5, losses: 3, draws: 2 },
+                game2: { wins: 7, losses: 1, draws: 4 }
+            },
+            "tehs-angels": {
+                game1: { wins: 3, losses: 5, draws: 1 },
+                game2: { wins: 6, losses: 2, draws: 3 }
+            },
+            doganators: {
+                game1: { wins: 4, losses: 4, draws: 2 },
+                game2: { wins: 8, losses: 0, draws: 2 }
+            },
+            astrofees: {
+                game1: { wins: 6, losses: 2, draws: 2 },
+                game2: { wins: 4, losses: 4, draws: 3 }
+            }
+        };
+
+        function displayStats(team, game) {
+    const stats = teamStats[team][game];
+    return `
+        <p>Wins: ${stats.wins}</p>
+        <p>Draws: ${stats.draws}</p>
+        <p>Losses: ${stats.losses}</p>
+    `;
+}
+
+        function updateStats(event) {
+            const team = event.target.dataset.team;
+            const game = event.target.value;
+            const statsElement = document.getElementById(`${team}-stats`);
+            statsElement.innerHTML = displayStats(team, game);
+        }
+
+        const gameSelects = document.querySelectorAll('.game-select');
+        gameSelects.forEach(select => {
+            select.addEventListener('change', updateStats);
+            const team = select.dataset.team;
+            const game = select.value;
+            const statsElement = document.getElementById(`${team}-stats`);
+            statsElement.innerHTML = displayStats(team, game);
+        });
+    </script>
+</body>
+</html>
