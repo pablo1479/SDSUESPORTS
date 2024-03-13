@@ -13,8 +13,7 @@ header {
 
 /* Navbar links */
 .navbar a {
-  float: left;
-  display: block;
+  display: inline-block;
   color: #000000;
   text-align: center;
   padding: 14px 16px;
@@ -26,4 +25,31 @@ header {
 .navbar a:hover {
   background-color: #ddd;
   color: black;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* About content styles */
+.about-content {
+  margin-bottom: 20px;
+}
+
+.about-content h2 {
+  color: #333;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+  background-color: #F1F1F1;
+  color: #333;
+  padding: 10px;
+  text-align: center;
 }
