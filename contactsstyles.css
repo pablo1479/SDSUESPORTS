@@ -41,8 +41,9 @@ header {
 
 #contact h2 {
     margin-top: 30px;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
+
 
 form {
     margin-top: 20px;
@@ -50,7 +51,7 @@ form {
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-left: 8px;
 }
 
 input[type="text"],
@@ -58,7 +59,8 @@ input[type="email"],
 textarea {
     width: calc(100% - 10px);
     padding: 10px;
-    margin-bottom: 15px;
+    margin-left: 8px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -97,4 +99,14 @@ input[type="submit"]:hover {
 
 #contact ul li {
     margin-bottom: 10px;
+    margin-left: 50px;
+    
+}
+
+#contact p {
+    margin-left: 8px;
+}
+
+footer {
+    margin-left: 25px;
 }
