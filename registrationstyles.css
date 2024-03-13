@@ -1,41 +1,83 @@
-header {
-    background-color: #F1F1F1;
-    text-align: center;
-    padding: 1px;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
 
-  /* The navbar container */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
 .navbar {
     overflow: hidden;
-    background-color: rgba(247, 40, 40, 0.8);
-  }
-  
-  /* Navbar links */
-  .navbar a {
+}
+
+.navbar a {
     float: left;
     display: block;
-    color: #000000;
+    color: #fff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
-  }
-  
-  /* Links - change color on hover */
-  .navbar a:hover {
-    background-color: #ddd;
+}
+
+.navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated Form Styles to Match the Second Snippet */
+form {
+    margin-top: 20px;
+    text-align: left; /* Adjusted to match second snippet's implicit alignment */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"], /* Added email input type for consistency */
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
     color: black;
-  }
-h1{
-    text-align: center;
-    color: black;
-}
-h2{
-    text-align: center;
-    
-}
-form{
-    text-align: center;
-}
-p{
-  text-align: center;
 }
