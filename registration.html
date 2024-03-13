@@ -8,8 +8,8 @@
     <script src="registration.js" defer></script>
 </head>
 <header>
-    <h1> San Diego State ESports</h1>
- </header>
+    <h1> SDSU eSports Application Page</h1>
+
  <title>Top Navigation Bar</title>
  <div class="navbar">
     <a href="index.html">Home</a>
@@ -19,26 +19,29 @@
     <a href="stats.html">Statistics</a>
     <a href="contacts.html">Contact</a>
   </div>
-    <main>
+</header>
+ <main>
+      
+      
+       <div class="container">
         <h2>Registration Form</h2>
-       <p> Student Name: </p>
         <form>
             <label for="Fname">First Name:</label>
-            <input type="text" id="Fname" name="Fname">
+            <input type="text" id="Fname" name="Fname" required>
 
             <label for="Lname">Last Name:</label>
-            <input type="text" id="Lname" name="Lname"> 
+            <input type="text" id="Lname" name="Lname" required> 
 
             <br><br>
             <label for="Semail">Student Email:</label>
-            <input type="text" id="Semail" name="Semail"> 
+            <input type="text" id="Semail" name="Semail" required> 
 
             <label for="Pword"> Password:</label>
-            <input type="text" id="Pword" name="Pword"> 
+            <input type="text" id="Pword" name="Pword" required> 
             <br><br>
 
             <label for="Sid">Student ID:</label>
-            <input type="text" id="Sid" name="Sid"> 
+            <input type="text" id="Sid" name="Sid" required> 
             <br><br>
 
             <label for="Twitch">Twitch (Optional): </label>
@@ -46,6 +49,7 @@
 
             <input type="submit" value="Submit"> 
         <form>
+        </div>
         <footer>
             <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
         </footer>
