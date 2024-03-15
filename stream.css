@@ -49,21 +49,21 @@ header {
   }
   
   .navbar {
-      overflow: hidden;
+    overflow: hidden;
   }
   
   .navbar a {
-      float: left;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
   }
   
   .navbar a:hover {
-      background-color: rgba(247, 40, 40, 0.8);
-      color: #fff;
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
   }
   
   .container {
@@ -116,4 +116,10 @@ header {
   input[type="submit"]:hover {
       background-color: #fff;
       color: black;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
   }
