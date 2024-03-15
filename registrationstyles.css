@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,6 +12,42 @@ header {
     padding: 20px;
     text-align: center;
 }
+=======
+/* Header styles */
+header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+/* The navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(247, 40, 40, 0.8); /* Adjust transparency and color as needed */
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+
+/* Links - change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+and match this style: header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 1px;
+  }
+>>>>>>> Stashed changes
 
 .navbar {
     overflow: hidden;
@@ -81,3 +118,16 @@ input[type="submit"]:hover {
     background-color: #fff;
     color: black;
 }
+<<<<<<< Updated upstream
+=======
+h2{
+    text-align: center;
+    
+}
+form{
+    text-align: center;
+}
+p{
+ text-align: center;
+}
+>>>>>>> Stashed changes
