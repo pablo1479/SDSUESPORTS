@@ -28,6 +28,16 @@ header {
   background-color: rgba(247, 40, 40, 0.8);
   color: #fff;
 }
+.small-image {
+  width: 90%; /* Adjust the percentage as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: auto;
+}
+.center-image {
+  display: block;
+  margin: auto;
+}
 
 
 
