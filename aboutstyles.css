@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  header {
+      background-color: #333;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+      text-align: center}
+  
+  .navbar {
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+  }
+  .center-image {
+    display: block;
+    margin: auto;
+}
+  
