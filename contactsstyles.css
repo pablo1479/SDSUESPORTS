@@ -1,8 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
 }
 
 header {
@@ -39,23 +39,28 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Updated Form Styles to Match the Second Snippet */
+#contact h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
 form {
     margin-top: 20px;
-    text-align: left; /* Adjusted to match second snippet's implicit alignment */
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-left: 8px;
 }
 
 input[type="text"],
-input[type="email"], /* Added email input type for consistency */
+input[type="email"],
 textarea {
     width: calc(100% - 10px);
     padding: 10px;
-    margin-bottom: 15px;
+    margin-left: 8px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -72,12 +77,36 @@ input[type="submit"] {
     padding: 12px 20px;
     border-radius: 4px;
     cursor: pointer;
-    width: auto;
-    margin: 20px auto;
-    display: block;
+    width: auto; /* Set width to auto to fit content */
+    margin: 20px auto; /* Center the button horizontally with auto margins */
+    display: block; /* Change display to block for full width */
 }
 
 input[type="submit"]:hover {
-    background-color: #fff;
+    background-color: rgba(247, 40, 40, 0.8);
     color: black;
+}
+
+/* Styles for example contacts */
+#contact h2 {
+    margin-top: 30px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    margin-left: 50px;
+    
+}
+
+#contact p {
+    margin-left: 8px;
+}
+
+footer {
+    margin-left: 25px;
 }
