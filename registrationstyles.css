@@ -2,15 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 header {
     background-color: #333;
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 20px;
-    text-align: center;
-}
+    text-align: center}
 
 .navbar {
     overflow: hidden;
@@ -29,6 +28,7 @@ header {
     background-color: rgba(247, 40, 40, 0.8);
     color: #fff;
 }
+
 
 .container {
     max-width: 800px;
