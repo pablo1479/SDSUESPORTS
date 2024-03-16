@@ -75,20 +75,19 @@ header {
 
 
 
-/*3*/
-body {
+
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
   }
   
-header {
+  header {
       background-color: #333;
-      color: #fff;
+      color: rgb(233, 28, 28);
       padding: 20px;
-      text-align: center;
-  }
+      text-align: center}
   
   .navbar {
     overflow: hidden;
@@ -97,7 +96,7 @@ header {
   .navbar a {
     float: left;
     display: block;
-    color: #fff;
+    color: #000000;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -105,9 +104,8 @@ header {
   
   .navbar a:hover {
     background-color: rgba(247, 40, 40, 0.8);
-    color: #fff;
+    color: #ffff;
   }
-  
   .container {
       max-width: 800px;
       margin: 20px auto;

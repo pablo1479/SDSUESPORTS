@@ -5,62 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merch Page</title>
     <link rel="stylesheet" href="merchstyles.css">
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<header>
-    <h1> SDSU eSports </h1>
+<body>
+    <header>
+        <h1>SDSU ESports</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SDSU ESports Team</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registration.html">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="application.html">Application</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stats.html">Statistics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="merch.html">Merchandise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stream.html">Stream</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <h1 class="redback">Merchandise</h1>
+    <h2>Show your team appreciation with some merch!</h2>
 
- <title>Top Navigation Bar</title>
- <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="registration.html">Registration</a>
-    <a href="application.html">Application</a>
-    <a href="stats.html">Statistics</a>
-    <a href="contacts.html">Contact</a>
-    <a href="merch.html">Merchandise</a>
-    <a href="stream.html">Stream</a>
-  </div>
-</header>
-        </header>
-        <h1 class="redback">Merchandise</h1>
-        <h2>Show your team appreciation with some merch!</h2>
+    <div class="container">
+        <div class="row">
+            <!-- For left column for filters -->
+            <div class="col-md-3">
+                <p>Filters</p>
+                <ul>
+                    <li>Price</li>
+                    <li>Quantity</li>
+                    <li>Size</li>
+                    <li>Type</li> 
+                </ul>
+            </div>
 
-        <!-- For left column for filters -->
-        <div class = "leftcol">
-            <p>Filters</p>
-            <li>Price</li>
-            <li>Quantity</li>
-            <li>Size</li>
-            <li>Type</li> 
+            <!-- For right column for ad space -->
+            <div class="col-md-3">
+                <p>Stay refreshed for the grind</p>
+                <img src="celciusimage.webp" alt="Celcuis Bottle">
+            </div>
+
+            <div class="col-md-6">
+                <div class="greyback">Sort by</div>
+                <ul>
+                    <li href="Item #1">Item #1</li>
+                        <div>Team #1 Shirt</div>
+                            <div>$14.99</div>
+                    <li href="Item #2">Item #2</li>
+                        <div>Team #2 Pants with logo</div>
+                            <div>$20.99</div>
+                    <li href="Item #3">Item #3</li>
+                        <div>Team #3 Banner</div>
+                            <div>$10.99</div>
+                    <li href="Item #4">Item #4</li>
+                        <div>Team #4 Hat</div>
+                            <div>$15.99</div>
+                    <li href="Item #5">Item #5</li>
+                        <div>Team #5 Keychain</div>
+                            <div>$5.99</div>
+                </ul>
+            </div>
         </div>
-
-        <!-- For right column for ad space -->
-        <div class = "rightcol">
-            <p>Stay refreshed for the grind</p>
-            <img src="celciusimage.webp" alt="Celcuis Bottle">
-        </div>
-
-        <div class="greyback">Sort by </div>
-        <main class="midcol">
-            <li href="Item #1">Item #1</li>
-                <div>Team #1 Shirt</div>
-                    <div>$14.99</div>
-            <li href="Item #2">Item #2</li>
-                <div>Team #2 Pants with logo</div>
-                    <div>$20.99</div>
-            <li href="Item #3">Item #3</li>
-                <div>Team #3 Banner</div>
-                    <div>$10.99</div>
-            <li href="Item #4">Item #4</li>
-                <div>Team #4 Hat</div>
-                    <div>$15.99</div>
-            <li href="Item #5">Item #5</li>
-                <div>Team #5 Keychain</div>
-                    <div>$5.99</div>
-        </main>
-        <footer class="footerformat">
-            <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
-        </footer>
+    </div>
+    
+    <footer class="footerformat">
+        <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
+    </footer>
+    <script src="merch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
