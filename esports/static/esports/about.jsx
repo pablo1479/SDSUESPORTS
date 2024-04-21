@@ -19,7 +19,6 @@ const About = () => {
             }
         });
     }
-
     // Use useEffect to execute functions after component is mounted
     useEffect(() => {
         displayWelcomeMessage();
