@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'homestyles.css' %}">
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>SDSU ESports Team</h1>
+        <nav>
+            <div class="navbar">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/registration">Registration</a>
+                <a href="/application">Application</a>
+                <a href="/stats">Statistics</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
