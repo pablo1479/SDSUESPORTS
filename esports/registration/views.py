@@ -59,7 +59,7 @@ def contact(request):
             return render(request, 'registration/success.html')
     else:
         form = RegistrationForm()
-    return render(request, 'registration/contact.html')
+    return render(request, 'registration/contacts.html')
 
 def merch(request):
     if request.method == 'POST':
