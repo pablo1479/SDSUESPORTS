@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+import React, { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-    function sortItems() {
-
+const Merch = () => {
+    const sortItems = () => {
         const itemList = document.querySelector('.col-md-6 ul');
         const items = Array.from(itemList.children);
         items.sort((a, b) => a.textContent.localeCompare(b.textContent));
@@ -9,7 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
         items.forEach(item => {
             itemList.appendChild(item);
         });
-    }
+    };
 
-    sortItems();
-});
+    useEffect(() => {
+        sortItems();
+    }, []);
+
+    return <div />;
+};
+
+export default Merch;
