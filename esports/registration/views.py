@@ -11,5 +11,23 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'registration/register.html', {'form': form})
 
-def home(request):
-    return render(request, 'registration/index.html')
+def index(request):
+    return render(request, 'index.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def application(request):
+    return render(request, 'application.html')
+
+def stats(request):
+    return render(request, 'stats.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def merch(request):
+    return render(request, 'merch.html')
+
+def stream(request):
+    return render(request, 'stream.html')

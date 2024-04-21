@@ -5,23 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <link rel="stylesheet" href="{% static 'homestyles.css' %}">
-    <!-- Include Bootstrap CSS -->
+    <title>Esports Team Statistics</title>
+    <link rel="stylesheet" href="{% static 'statsstyles.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="{% static 'registration.js' %}" defer></script>
+    
 </head>
 <body>
     <header>
         <h1>SDSU ESports</h1>
-        <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">SDSU ESports</a>
+                <a class="navbar-brand" href="#">SDSU ESports Team</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'index' %}">Home</a>
                         </li>
@@ -49,43 +48,62 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
-
-    <main>
-        <div class="container">
-            <form>
-                <label for="Fname">First Name:</label>
-                <input type="text" id="Fname" name="Fname" required>
-
-                <label for="Lname">Last Name:</label>
-                <input type="text" id="Lname" name="Lname" required> 
-
-                <br><br>
-                <label for="Semail">Student Email:</label>
-                <input type="text" id="Semail" name="Semail" required> 
-
-                <label for="Pword"> Password:</label>
-                <input type="text" id="Pword" name="Pword" required> 
-                <br><br>
-
-                <label for="Sid">Student ID:</label>
-                <input type="text" id="Sid" name="Sid" required> 
-                <br><br>
-
-                <label for="Twitch">Twitch (Optional): </label>
-                <input type="text" id="Twitch" name="Twitch">
-
-                <input type="submit" value="Submit"> 
-            </form>
+    <div class="team">
+        <h2>Manshawdies</h2>
+        <label for="manshawdies-game-select">Select a Game:</label>
+        <select id="manshawdies-game-select" class="game-select" data-team="manshawdies">
+            <option value="game1">Valorant</option>
+            <option value="game2">Overwatch 2</option>
+            
+        </select>
+        <div id="manshawdies-stats" class="stats">
+            
         </div>
-    </main>
+    </div>
 
-    <footer class="mt-5">
-        <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
-    </footer>
+    <div class="team">
+        <h2>Teh's Angels</h2>
+        <label for="tehs-angels-game-select">Select a Game:</label>
+        <select id="tehs-angels-game-select" class="game-select" data-team="tehs-angels">
+            <option value="game1">League of Legends</option>
+            <option value="game2">Smite</option>
+            
+        </select>
+        <div id="tehs-angels-stats" class="stats">
+            
+        </div>
+    </div>
 
-    <!-- Include Bootstrap JavaScript -->
+    <div class="team">
+        <h2>Doganators</h2>
+        <label for="doganators-game-select">Select a Game:</label>
+        <select id="doganators-game-select" class="game-select" data-team="doganators">
+            <option value="game1">Forza Horizon</option>
+            <option value="game2">Gran Turismo</option>
+            
+        </select>
+        <div id="doganators-stats" class="stats">
+            
+        </div>
+    </div>
+
+    <div class="team">
+        <h2>Astrofees</h2>
+        <label for="astrofees-game-select">Select a Game:</label>
+        <select id="astrofees-game-select" class="game-select" data-team="astrofees">
+            <option value="game1">Math is Fun</option>
+            <option value="game2">Poptropica</option>
+            
+        </select>
+        <div id="astrofees-stats" class="stats">
+            
+        </div>
+    </div>
+
+    <script src="{% static 'stats.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
