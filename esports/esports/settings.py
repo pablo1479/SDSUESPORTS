@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',  # This is your custom app
+    'rest_framework',
 
 ]
 
