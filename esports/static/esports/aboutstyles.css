@@ -1,3 +1,4 @@
+/* Base Page Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,11 +7,13 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: rgb(233, 28, 28);
-    padding: 20px;
-    text-align: center}
+  background-color: #333;
+  color: rgb(233, 28, 28);
+  padding: 20px;
+  text-align: center;
+}
 
+/* Navbar Styles */
 .navbar {
   overflow: hidden;
 }
@@ -28,15 +31,84 @@ header {
   background-color: rgba(247, 40, 40, 0.8);
   color: #ffff;
 }
+
+/* Image Styles */
 .small-image {
   width: 90%; /* Adjust the percentage as needed */
   height: auto; /* Maintain aspect ratio */
   display: block;
   margin: auto;
 }
+
 .center-image {
   display: block;
   margin: auto;
 }
 
-  
+/* Modal Styles */
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #333;
+    color: white;
+    border-bottom: 1px solid #444;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-header .btn-close {
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.modal-body form {
+    margin-top: 10px;
+}
+
+.modal-body label {
+    color: #333;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="password"],
+.modal-body textarea {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+.modal-body button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.modal-body button[type="submit"]:hover {
+    background-color: rgba(233, 28, 28, 0.8);
+    color: white;
+}
+.navbar .d-flex .btn-primary {
+  background-color: #333 !important; /* Force this color, overriding default Bootstrap styles */
+  color: white !important; /* Force white text */
+}
+
+.navbar .d-flex .btn-primary:hover {
+  background-color: rgba(233, 28, 28, 0.8) !important; /* Force hover color */
+  color: white !important;
+}

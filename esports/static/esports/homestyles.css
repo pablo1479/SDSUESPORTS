@@ -149,3 +149,7 @@ input[type="submit"]:hover {
   border-radius: 4px; /* Rounded corners for the button */
   transition: background-color 0.3s
 }
+.modal-body button[type="submit"]:hover {
+  background-color: rgba(233, 28, 28, 0.8); /* Hover effect to match navbar links */
+  color: white; /* Maintain contrast */
+}
