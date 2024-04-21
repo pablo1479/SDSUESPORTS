@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  header {
+      background-color: #333;
+      color: rgb(233, 28, 28);
+      padding: 20px;
+      text-align: center}
+  
+  .navbar {
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #ffff;
+  }
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-left: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Set width to auto to fit content */
+    margin: 20px auto; /* Center the button horizontally with auto margins */
+    display: block; /* Change display to block for full width */
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: black;
+}
+
+/* Styles for example contacts */
+#contact h2 {
+    margin-top: 30px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    margin-left: 50px;
+    
+}
+
+#contact p {
+    margin-left: 8px;
+}
+
+footer {
+    margin-left: 25px;
+}
