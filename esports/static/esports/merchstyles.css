@@ -180,12 +180,10 @@
     padding: 10px 20px;
     margin-left: 10px; /* Space it a bit from other nav items */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    color: white; /* Ensuring text color is explicitly set */
-    !important; /* Ensuring this style has priority */
-}
+    color: white; /* Ensuring text color is explicitly set 
 
 .navbar .navbar-collapse .d-flex .btn-primary:hover {
     background-color: rgba(233, 28, 28, 0.8); /* Highlight button on hover */
     color: white; /* Ensure text color is white on hover */
-    !important; /* Ensuring this style has priority */
+   
 }
