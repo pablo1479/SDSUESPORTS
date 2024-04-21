@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -28,6 +29,20 @@ header {
 .navbar a:hover {
   background-color: rgba(247, 40, 40, 0.8);
   color: #ffff;
+}
+
+/* Navbar button styles */
+.navbar .d-flex .btn-primary {
+  background-color: #333; /* Match the header background color */
+  border: none; /* Remove default border */
+  padding: 10px 20px;
+  margin-left: 10px; /* Space it a bit from other nav items */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar .d-flex .btn-primary:hover {
+  background-color: rgba(233, 28, 28, 0.8); /* Highlight button on hover */
+  color: white; /* Ensure text color is white on hover */
 }
 
 .container {
@@ -79,4 +94,58 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #fff;
   color: black;
+}
+
+/* Modal Styles */
+.modal-content {
+  background-color: #fff; /* Modal background */
+  border-radius: 8px; /* Rounded corners like other containers */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.modal-header {
+  background-color: #333; /* Header background to match the navbar */
+  color: white; /* Text color for contrast */
+  border-bottom: 1px solid #444; /* Slight border for a clean separation */
+}
+
+.modal-title {
+  font-weight: bold; /* Bold title font */
+}
+
+.modal-body {
+  padding: 20px; /* Adequate padding for content */
+}
+
+.modal-header .btn-close {
+  background-color: #fff; /* White background for the close button */
+  border-radius: 50%; /* Circular close button */
+  opacity: 1; /* Make sure it's fully visible */
+}
+
+.modal-body form {
+  margin-top: 10px; /* Space from header */
+}
+
+.modal-body label {
+  color: #333; /* Dark labels for readability */
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="password"],
+.modal-body textarea {
+  background-color: #f8f9fa; /* Light background for inputs */
+  border: 1px solid #ccc; /* Consistent border with other inputs */
+  border-radius: 4px; /* Rounded borders */
+  padding: 10px; /* Padding within inputs */
+  width: 100%; /* Full width */
+}
+
+.modal-body button[type="submit"] {
+  background-color: #333; /* Matching the navbar and header */
+  color: white; /* Text color for contrast */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners for the button */
+  transition: background-color 0.3s
 }
