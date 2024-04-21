@@ -13,7 +13,7 @@ def register(request):
 
 def index(request):
     return render(request, 'index.html')
-
+'''
 def about(request):
     return render(request, 'about.html')
 
@@ -31,3 +31,4 @@ def merch(request):
 
 def stream(request):
     return render(request, 'stream.html')
+'''
