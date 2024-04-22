@@ -8,13 +8,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-import json
-from django.core.exceptions import ValidationError  # Importing ValidationError
+from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+from rest_framework import status, views
+from rest_framework.permissions import IsAuthenticated
 
-# Function to handle user registration via form
-def register_form(request):
+
+def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
@@ -72,6 +73,32 @@ class ProfileView(APIView):
         }
         return Response(user_data)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # View for user profile page
 def profile_view(request):
     return render(request, 'registration/profile.html')
@@ -79,26 +106,4 @@ def profile_view(request):
 # Function to handle user logout
 def logout_view(request):
     logout(request)
-    return redirect(reverse('home'))
-
-# API view to handle user registration via API
-@csrf_exempt
-def register_api(request):
-    if request.method == 'POST':
-        data = json.loads(request.body)
-        try:
-            user = User.objects.create_user(
-                username=data['email'],
-                email=data['email'],
-                password=data['password'],
-                first_name=data['first_name'],
-                last_name=data['last_name']
-            )
-            user.full_clean()
-            user.save()
-            return JsonResponse({'success': True, 'message': 'User registered successfully'}, status=201)
-        except ValidationError as ve:
-            return JsonResponse({'success': False, 'message': str(ve.messages)}, status=400)
-        except Exception as e:
-            return JsonResponse({'success': False, 'message': 'Failed to register user'}, status=400)
-    return JsonResponse({'success': False, 'message': 'Only POST method is allowed'}, status=405)
+    return redirect('/home')  # Redirect to home page after logout

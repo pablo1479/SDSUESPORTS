@@ -15,4 +15,12 @@ urlpatterns = [
     path('profile/', views.profile_view, name='profile_page'),  # Distinct name for clarity
     path('logout/', views.logout_view, name='logout'),
     path('api/register/', views.register_api, name='api_register'),  # Clear distinction for the API endpoint
+    path('api/login/', LoginView.as_view(), name='api_login'),
+    path('api/profile/', ProfileView.as_view(), name='profile'),
+    path('profile/', profile_view, name='profile'),
+    path('logout/', logout_view, name='logout'),
+    path('submit_application/', views.submit_application, name='submit_application'),
+
+
+
 ]

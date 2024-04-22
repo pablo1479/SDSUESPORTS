@@ -75,7 +75,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p>Filters</p>
+                    <h4>Filters</h4>
                     <ul>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -110,10 +110,58 @@
                         <option value="2">Size</option>
                         <option value="3">Quantity</option>
                     </select>
-                    <ul>
+
+                    <div class="list-group">
+                        
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">1. Team Manshawdies T-Shirt</h5>
+                              <small class="text-body-secondary">$14.99</small>
+                            </div>
+                            <p class="mb-1">T-shirt representing the Team Manshawdies</p>
+                            <small class="text-body-secondary">3 left</small>
+                          </a>
+
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">2. Team Doganators Pants</h5>
+                              <small class="text-body-secondary">$20.99</small>
+                            </div>
+                            <p class="mb-1">Pants presenting the icon of the Team Doganators</p>
+                            <small class="text-body-secondary">10 left</small>
+                          </a>
+
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">3. Teh's Angels Hat</h5>
+                              <small class="text-body-secondary">$15.99</small>
+                            </div>
+                            <p class="mb-1">Hat worn by the iconinc Teh's Angels'</p>
+                            <small class="text-body-secondary">5 left</small>
+                          </a>
+
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">4. Team Astrofees Key Chain</h5>
+                              <small class="text-body-secondary">7 left</small>
+                            </div>
+                            <p class="mb-1">Key Chain showcasing the Team Astrofees banner</p>
+                            <small class="text-body-secondary">$10.00</small>
+                          </a>
+
+                      </div>
+
+                      <h3>Use this to add more merchandise!</h3>
+                      <form action="/add_merchandise" method="POST">
+                        <input type="text" name="name" placeholder="Product Name" required>
+                        <input type="text" name="description" placeholder="Description" required>
+                        <input type="number" name="price" placeholder="Price" required>
+                        <input type="number" name="quantity" placeholder="Quantity" required>
+                        <button type="submit">Add Merchandise</button>
+                    </form>
+                    
+                    <!-- <ul>
                         <li href="Item #1">Item #1</li>
-                        <img class="img-fluid w-50 d-none d-sm-block " src="{% static 'esports/aztec_gaming_banner.jpg' %}" alt="Aztec Gaming Banner" />
-                        https://www.shopaztecs.com/p-13055-classic-sdsu-alumni-tee.aspx
                             <div>Team #1 Shirt</div>
                                 <div>$14.99</div>
                         <li href="Item #2">Item #2</li>
@@ -128,7 +176,7 @@
                         <li href="Item #5">Item #5</li>
                             <div>Team #5 Keychain</div>
                                 <div>$5.99</div>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col">
                     <div class="container">
