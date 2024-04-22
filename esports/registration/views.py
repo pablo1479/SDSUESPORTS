@@ -62,14 +62,15 @@ def contact(request):
     return render(request, 'registration/contacts.html')
 
 def merch(request):
+    #merchandise = Merchandise.objects.all()
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'registration/success.html')
+            return render(request, 'registration/success.html') #Will need {'merchandise': merchandise} when MYSQL is turned on
     else:
         form = RegistrationForm()
-    return render(request, 'registration/merch.html')
+    return render(request, 'registration/merch.html')#Will need {'merchandise': merchandise} when MYSQL is turned on
 
 def stream(request):
     if request.method == 'POST':
