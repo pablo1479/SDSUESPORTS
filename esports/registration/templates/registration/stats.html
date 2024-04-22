@@ -104,6 +104,13 @@
             
         </div>
     </div>
+
+    <!-- Bar graph section -->
+    <div class="bar-graph">
+        <h2>Win vs Loss Rates</h2>
+        <canvas id="player-stats"></canvas>
+    </div>
+
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -128,38 +135,82 @@
         </div>
     </div>
     
+    <!-- JavaScript for login form submission -->
     <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const formData = {
-            username: document.getElementById('username').value,
-            password: document.getElementById('password').value
-        };
-    
-        fetch('/api/login/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.access) {
-                localStorage.setItem('accessToken', data.access);
-                localStorage.setItem('refreshToken', data.refresh);
-                window.location.href = '/profile'; // Redirect to the profile page or wherever needed
-            } else {
-                alert('Invalid credentials or some error occurred');
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const formData = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+        
+            fetch('/api/login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.access) {
+                    localStorage.setItem('accessToken', data.access);
+                    localStorage.setItem('refreshToken', data.refresh);
+                    window.location.href = '/profile'; // Redirect to the profile page or wherever needed
+                } else {
+                    alert('Invalid credentials or some error occurred');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
     </script>
+
+    <!-- Chart.js for creating the bar graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0"></script>
+
+    <!-- JavaScript for creating and rendering the bar graph -->
+    <script>
+        // Sample data for the bar graph
+        const playerNames = ['Alex Rivera', 'Papa Pookie', 'Pookie Pablo', 'Robert McLockedin'];
+        const winRates = [0.7, 0.6, 0.8, 0.5]; // Assuming win rates are between 0 and 1
+
+        // Creating the bar graph using Chart.js
+        const ctx = document.getElementById('player-stats').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: playerNames,
+                datasets: [{
+                    label: 'Win vs Loss Rates',
+                    data: winRates,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
     <script src="{% static 'stats.jsx' %}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
