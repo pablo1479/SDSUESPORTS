@@ -1,3 +1,4 @@
+/*1*/
 .leftcol {
     width:170px;
     height:auto;
@@ -30,42 +31,81 @@
     background-color: grey;
  }
 
-
-
-
-
+/*2*/
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: rgb(233, 28, 28);
+    padding: 20px;
+    text-align: center}
+
+.navbar {
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: rgba(247, 40, 40, 0.8);
+  color: #ffff;
+}
+.small-image {
+  width: 90%; /* Adjust the percentage as needed /
+  height: auto; / Maintain aspect ratio */
+  display: block;
+  margin: auto;
+}
+.center-image {
+  display: block;
+  margin: auto;
+}
+
+
+
+
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
   }
   
-header {
+  header {
       background-color: #333;
-      color: #fff;
+      color: rgb(233, 28, 28);
       padding: 20px;
-      text-align: center;
-  }
+      text-align: center}
   
   .navbar {
-      overflow: hidden;
+    overflow: hidden;
   }
   
   .navbar a {
-      float: left;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
   }
   
   .navbar a:hover {
-      background-color: rgba(247, 40, 40, 0.8);
-      color: #fff;
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #ffff;
   }
-  
   .container {
       max-width: 800px;
       margin: 20px auto;
@@ -116,4 +156,10 @@ header {
   input[type="submit"]:hover {
       background-color: #fff;
       color: black;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
   }

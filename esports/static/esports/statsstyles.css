@@ -1,0 +1,157 @@
+/* Base Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: rgb(233, 28, 28);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Team and Stats Styling */
+.team {
+    margin-left: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stats {
+    border: 1px solid #ccc; 
+    padding: 10px;
+    border-radius: 4px; 
+    width: fit-content; 
+    max-width: 300px; 
+}
+
+/* Game Select Styles */
+.game-select,
+.stats p {
+    margin: 0;
+}
+
+.game-select {
+    margin-bottom: 10px;
+    width: 55%; 
+    background-color: #fff;
+    color: #000;
+}
+
+.game-select:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #fff;
+}
+
+.game-select:focus {
+    outline: none;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #333;
+    color: white;
+    border-bottom: 1px solid #444;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-header .btn-close {
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.modal-body form {
+    margin-top: 10px;
+}
+
+.modal-body label {
+    color: #333;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="password"],
+.modal-body textarea {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+.modal-body button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.modal-body button[type="submit"]:hover {
+    background-color: rgba(233, 28, 28, 0.8);
+    color: white;
+}
+
+/* Navbar Button Styling */
+.navbar .navbar-collapse .d-flex .btn-primary {
+    background-color: #333; /* Match header background color */
+    border: none; 
+    padding: 10px 20px;
+    margin-left: 10px; 
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.navbar .navbar-collapse .d-flex .btn-primary:hover {
+    background-color: rgba(233, 28, 28, 0.8);
+    color: white;
+}

@@ -2,28 +2,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.navbar {
+    background-color: #ffffff;
+  }
+  
+  header {
+      background-color: #333;
+      color: rgb(233, 28, 28);
+      padding: 20px;
+      text-align: center}
+  
+  .navbar {
     overflow: hidden;
-}
-
-.navbar a {
+  }
+  
+  .navbar a {
     float: left;
     display: block;
-    color: #fff;
+    color: #000000;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-}
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #ffff;
+  }
 
 .navbar a:hover {
     background-color: rgba(247, 40, 40, 0.8);
@@ -31,7 +35,6 @@ header {
 }
 
 .container {
-    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;

@@ -1,0 +1,158 @@
+/* Base Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: rgb(233, 28, 28);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: rgba(247, 40, 40, 0.8);
+    color: #ffff;
+}
+
+/* Customizing the modal button within the navbar */
+.navbar .d-flex .btn-outline-primary {
+    background-color: transparent; /* Clear background for a cleaner look */
+    color: #333; /* Dark text color for contrast with light navbar */
+    border-color: #333; /* Matching border color */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.navbar .d-flex .btn-outline-primary:hover,
+.navbar .d-flex .btn-outline-primary:focus {
+    background-color: #333; /* Dark background on hover/focus */
+    color: white; /* White text on hover/focus */
+}
+
+/* Container and Form Styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Button Styling */
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* General Modal Styles */
+.modal-content {
+    background-color: #fff; /* Modal background */
+    border-radius: 8px; /* Rounded corners like other containers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.modal-header {
+    background-color: #333; /* Header background to match the navbar */
+    color: white; /* Text color for contrast */
+    border-bottom: 1px solid #444; /* Slight border for a clean separation */
+}
+
+.modal-title {
+    font-weight: bold; /* Bold title font */
+}
+
+.modal-body {
+    padding: 20px; /* Adequate padding for content */
+}
+
+.modal-header .btn-close {
+    background-color: #fff; /* White background for the close button */
+    border-radius: 50%; /* Circular close button */
+    opacity: 1; /* Make sure it's fully visible */
+}
+
+.modal-body form {
+    margin-top: 10px; /* Space from header */
+}
+
+.modal-body label {
+    color: #333; /* Dark labels for readability */
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="password"],
+.modal-body textarea {
+    background-color: #f8f9fa; /* Light background for inputs */
+    border: 1px solid #ccc; /* Consistent border with other inputs */
+    border-radius: 4px; /* Rounded borders */
+    padding: 10px; /* Padding within inputs */
+    width: 100%; /* Full width */
+}
+
+.modal-body button[type="submit"] {
+    background-color: #333; /* Matching the navbar and header */
+    color: white; /* Text color for contrast */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners for the button */
+    transition: background-color 0.3s; /* Transition for interactive change */
+}
+
+.modal-body button[type="submit"]:hover {
+    background-color: rgba(233, 28, 28, 0.8); /* Hover effect to match navbar links */
+    color: white; /* Maintain contrast */
+}
