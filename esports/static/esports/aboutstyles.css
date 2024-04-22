@@ -90,25 +90,17 @@ header {
     width: 100%;
 }
 
-.modal-body button[type="submit"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.modal-body button[type="submit"]:hover {
-    background-color: rgba(233, 28, 28, 0.8);
-    color: white;
-}
+/* Adjust login button style */
 .navbar .d-flex .btn-primary {
-  background-color: #333 !important; /* Force this color, overriding default Bootstrap styles */
-  color: white !important; /* Force white text */
+  background-color: black !important; /* Force black background color */
+  color: white !important; /* Force white text color */
+  border: none !important; /* Remove default border */
+  padding: 10px 20px !important; /* Adjust padding */
+  margin-left: 10px !important; /* Space it a bit from other nav items */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .navbar .d-flex .btn-primary:hover {
-  background-color: rgba(233, 28, 28, 0.8) !important; /* Force hover color */
-  color: white !important;
+  background-color: rgba(233, 28, 28, 0.8) !important; /* Hover effect color */
+  color: white !important; /* Ensure text color is white on hover */
 }
