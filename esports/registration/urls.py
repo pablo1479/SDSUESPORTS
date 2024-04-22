@@ -1,24 +1,18 @@
 from django.urls import path
 from . import views
-from .views import LoginView
-from .views import ProfileView
-from .views import profile_view
-from .views import logout_view
 
 urlpatterns = [
-    path('home/', views.index, name='home'),  # Empty path for the root of the site
+    path('home/', views.index, name='home'),
     path('about/', views.about, name='about'),
-    path('register/', views.register, name='register'),
+    path('register/', views.register_form, name='register_form'),  # Renamed for clarity
     path('application/', views.application, name='application'),
     path('stats/', views.stats, name='stats'),
     path('contact/', views.contact, name='contact'),
     path('merch/', views.merch, name='merch'),
     path('stream/', views.stream, name='stream'),
-    path('api/login/', LoginView.as_view(), name='api_login'),
-    path('api/profile/', ProfileView.as_view(), name='profile'),
-    path('profile/', profile_view, name='profile'),
-    path('logout/', logout_view, name='logout'),
-
-
+    path('api/login/', views.LoginView.as_view(), name='api_login'),
+    path('api/profile/', views.ProfileView.as_view(), name='api_profile'),
+    path('profile/', views.profile_view, name='profile_page'),  # Distinct name for clarity
+    path('logout/', views.logout_view, name='logout'),
+    path('api/register/', views.register_api, name='api_register'),  # Clear distinction for the API endpoint
 ]
-

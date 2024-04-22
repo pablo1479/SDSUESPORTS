@@ -27,7 +27,7 @@
                             <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Registration</a>
+                            <a class="nav-link" href="{% url 'register_form' %}">Registration</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'application' %}">Application</a>
@@ -45,15 +45,11 @@
                             <a class="nav-link" href="{% url 'stream' %}">Stream</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'profile' %}">Profile</a> <!-- Highlight Profile link as active -->
+                            <a class="nav-link" href="{% url 'profile_page' %}">Profile</a> <!-- Highlight Profile link as active -->
                         </li>
-                        <p>Is User Authenticated? {{ user.is_authenticated }}</p>
-
-                        {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'logout' %}">Log Out</a> <!-- Logout Link -->
                         </li>
-                        {% endif %}
                     </ul>
                 </div>
             </div>

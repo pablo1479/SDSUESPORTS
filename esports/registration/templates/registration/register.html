@@ -32,7 +32,7 @@
                             <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Registration</a>
+                            <a class="nav-link" href="{% url 'register_form' %}">Registration</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'application' %}">Application</a>
@@ -58,7 +58,7 @@
 
     <main>
         <div class="container">
-            <form>
+            <form id="registrationForm" method="POST" action="/api/register/">
                 <label for="Fname">First Name:</label>
                 <input type="text" id="Fname" name="Fname" required>
 
@@ -113,15 +113,20 @@
     </div>
     
     <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
+       document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
         const formData = {
-            username: document.getElementById('username').value,
-            password: document.getElementById('password').value
+            first_name: document.getElementById('Fname').value,
+            last_name: document.getElementById('Lname').value,
+            email: document.getElementById('Semail').value,
+            password: document.getElementById('Pword').value,
+            student_id: document.getElementById('Sid').value,
+            twitch: document.getElementById('Twitch').value
         };
-    
-        fetch('/api/login/', {
+
+        fetch('/api/register/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -130,16 +135,45 @@
         })
         .then(response => response.json())
         .then(data => {
-            if (data.access) {
-                localStorage.setItem('accessToken', data.access);
-                localStorage.setItem('refreshToken', data.refresh);
-                window.location.href = '/profile'; // Redirect to the profile page or wherever needed
+            if (data.success) {
+                console.log('Registration successful');
+                window.location.href = '/login'; // Redirect to login page or anywhere else
             } else {
-                alert('Invalid credentials or some error occurred');
+                alert('Registration failed: ' + data.message);
             }
         })
         .catch(error => console.error('Error:', error));
     });
+});
+    </script>
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const formData = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+        
+            fetch('/api/login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.access) {
+                    localStorage.setItem('accessToken', data.access);
+                    localStorage.setItem('refreshToken', data.refresh);
+                    window.location.href = '/profile'; // Redirect to the profile page or wherever needed
+                } else {
+                    alert('Invalid credentials or some error occurred');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
     </script>
     <!-- Include Bootstrap JavaScript -->
     <script src="{% static 'esports/registration.jsx' %}"></script>
