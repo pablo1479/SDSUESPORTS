@@ -61,14 +61,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="loginForm">
+                    <form>
                         <div class="mb-3">
                             <label for="username" class="form-label">Username:</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
+                            <input type="text" class="form-control" id="username" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <input type="password" class="form-control" id="password" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Log In</button>
                     </form>
@@ -76,41 +76,11 @@
             </div>
         </div>
     </div>
-    
-    <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const formData = {
-            username: document.getElementById('username').value,
-            password: document.getElementById('password').value
-        };
-    
-        fetch('/api/login/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.access) {
-                localStorage.setItem('accessToken', data.access);
-                localStorage.setItem('refreshToken', data.refresh);
-                window.location.href = '/profile'; // Redirect to the profile page or wherever needed
-            } else {
-                alert('Invalid credentials or some error occurred');
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-    </script>
     <main class="container">
         <img src="{% static 'esports/SDSU Gaming Center.jpg' %}" alt="SDSU Gaming Center">
         <p class="mt-3">Welcome to the official website of the San Diego State University ESports Team!</p>
     </main>
-    
+
     <footer class="mt-5">
         <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
     </footer>

@@ -1,17 +1,5 @@
 from django.shortcuts import render
 from .forms import RegistrationForm
-from django.contrib.auth import authenticate
-from rest_framework import status
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth import logout
-from django.shortcuts import redirect
-from rest_framework import status, views
-from rest_framework.permissions import IsAuthenticated
-from django.http import HttpResponse
-
 
 def register(request):
     if request.method == 'POST':
@@ -93,43 +81,3 @@ def stream(request):
     else:
         form = RegistrationForm()
     return render(request, 'registration/stream.html')
-
-
-class LoginView(APIView):
-    def post(self, request):
-        username = request.data.get('username')
-        password = request.data.get('password')
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            refresh = RefreshToken.for_user(user)
-            return Response({
-                'refresh': str(refresh),
-                'access': str(refresh.access_token),
-                'user_id': user.id
-            })
-        else:
-            return Response({'error': 'Invalid Credentials'}, status=status.HTTP_401_UNAUTHORIZED)
-class ProfileView(APIView):
-    permission_classes = [IsAuthenticated]  # Ensures access is only for authenticated users
-
-    def get(self, request):
-        # Simulate a response with some user data, ideally fetched from your database
-        user_data = {
-            "username": request.user.username,
-            "email": request.user.email
-        }
-        return Response(user_data)
-def profile_view(request):
-    # If you're using a single page application framework:
-        return render(request, 'registration/profile.html')
-def logout_view(request):
-    logout(request)
-    return redirect('/home')  # Redirect to home page after logout
-
-def submit_application(request):
-    if request.method == 'POST':
-        # Process the form data here
-        return HttpResponse("Form submitted successfully!")
-    else:
-        # Handle GET request (if needed)
-        return HttpResponse("This URL only accepts POST requests.")
