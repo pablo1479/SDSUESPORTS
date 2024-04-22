@@ -10,6 +10,7 @@ from django.contrib.auth import logout
 from django.shortcuts import redirect
 from rest_framework import status, views
 from rest_framework.permissions import IsAuthenticated
+from django.http import HttpResponse
 
 
 def register(request):
@@ -123,3 +124,11 @@ def profile_view(request):
 def logout_view(request):
     logout(request)
     return redirect('/home')  # Redirect to home page after logout
+
+def submit_application(request):
+    if request.method == 'POST':
+        # Process the form data here
+        return HttpResponse("Form submitted successfully!")
+    else:
+        # Handle GET request (if needed)
+        return HttpResponse("This URL only accepts POST requests.")
