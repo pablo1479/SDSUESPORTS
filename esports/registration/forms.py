@@ -11,4 +11,7 @@ class RegistrationForm(forms.ModelForm):
         model = Registrant
         fields = ['first_name', 'last_name', 'student_email', 'password', 'student_id', 'twitch']
 
-
+class ApplicationForm(forms.ModelForm):
+    class Meta:
+        model = Registrant
+        fields = ['team_name', ]
