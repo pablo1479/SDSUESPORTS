@@ -18,6 +18,7 @@ urlpatterns = [
     path('api/profile/', ProfileView.as_view(), name='profile'),
     path('profile/', profile_view, name='profile'),
     path('logout/', logout_view, name='logout'),
+    path('submit_application/', views.submit_application, name='submit_application'),
 
 
 ]
