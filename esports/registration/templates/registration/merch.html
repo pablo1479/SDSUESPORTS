@@ -15,7 +15,7 @@
         <h1>SDSU ESports</h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">SDSU ESports</a>
+                <a class="navbar-brand" href="#">SDSU ESports Team</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -137,6 +137,8 @@
                     </select>
                     <ul>
                         <li href="Item #1">Item #1</li>
+                        <img class="img-fluid w-50 d-none d-sm-block " src="{% static 'esports/aztec_gaming_banner.jpg' %}" alt="Aztec Gaming Banner" />
+                        https://www.shopaztecs.com/p-13055-classic-sdsu-alumni-tee.aspx
                             <div>Team #1 Shirt</div>
                                 <div>$14.99</div>
                         <li href="Item #2">Item #2</li>
@@ -155,9 +157,11 @@
                 </div>
                 <div class="col">
                     <div class="container">
-                        <p>Stay refreshed for the grind</p>
-                        <img src="{% static 'celciusimage.webp' %}" alt="Celcuis Bottle">
-                    </div>
+                        <p class="text-black-50">Stay refreshed for the grind</p>
+                        <iframe width="300" height="450"
+                            src="https://www.youtube.com/embed/N9iAo4r5Wfg" autoplay>
+                        </iframe>
+                        </div>
                 </div>
             </div>
         </div>
@@ -185,7 +189,7 @@
             </div>
         </div>
     </div>
-    <footer class="footerformat">
+    <footer class="">
         <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
     </footer>
     <script src="{% static 'esports/merch.jsx' %}"></script>
