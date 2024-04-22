@@ -11,7 +11,5 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('merch/', views.merch, name='merch'),
     path('stream/', views.stream, name='stream'),
-    path('api/players/', views.PlayerList.as_view(), name='player-list'),
-    path('api/teams/', views.TeamList.as_view(), name='team-list'),
 ]
 
