@@ -54,50 +54,114 @@
         </nav>
     </header>
     
-    <h1 class="redback">Merchandise</h1>
-    <h2>Show your team appreciation with some merch!</h2>
-
-    <div class="container">
-        <div class="row">
-            <!-- For left column for filters -->
-            <div class="col-md-3">
-                <p>Filters</p>
-                <ul>
-                    <li>Price</li>
-                    <li>Quantity</li>
-                    <li>Size</li>
-                    <li>Type</li> 
-                </ul>
-            </div>
-
-            <!-- For right column for ad space -->
-            <div class="col-md-3">
-                <p>Stay refreshed for the grind</p>
-                <img src="{% static 'celciusimage.webp' %}" alt="Celcuis Bottle">
-            </div>
-
-            <div class="col-md-6">
-                <div class="greyback">Sort by</div>
-                <ul>
-                    <li href="Item #1">Item #1</li>
-                        <div>Team #1 Shirt</div>
-                            <div>$14.99</div>
-                    <li href="Item #2">Item #2</li>
-                        <div>Team #2 Pants with logo</div>
-                            <div>$20.99</div>
-                    <li href="Item #3">Item #3</li>
-                        <div>Team #3 Banner</div>
-                            <div>$10.99</div>
-                    <li href="Item #4">Item #4</li>
-                        <div>Team #4 Hat</div>
-                            <div>$15.99</div>
-                    <li href="Item #5">Item #5</li>
-                        <div>Team #5 Keychain</div>
-                            <div>$5.99</div>
-                </ul>
+    <!-- Showcase -->
+    <!-- <h1 class="redback">Merchandise</h1> -->
+    <section class="bg-white text-dark p-0 p-lg-0 pt-lg-5 text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>
+                       <span class="text-danger">Merchandise</span>
+                    </h1>
+                    <p class="lead my-4">
+                        Show your team appreciation with some merch!
+                    </p>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block " src="{% static 'esports/aztec_gaming_banner.jpg' %}" alt="Aztec Gaming Banner" />
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Search description -->
+    <section class="bg-danger text-black p-5">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 mb-md-0">Search our inventory</h3>
+                <div class="input-group news-input">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Product Name" 
+                        aria-label="Product Name" 
+                        aria-describedby="button-addon2">
+                    <button 
+                        class="btn btn-outline-secondary" 
+                        type="button" 
+                        id="button-addon2">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Filters</p>
+                    <ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Price
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Quantity
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Size
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Type
+                            </label>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Sort By</option>
+                        <option value="1">Price</option>
+                        <option value="2">Size</option>
+                        <option value="3">Quantity</option>
+                    </select>
+                    <ul>
+                        <li href="Item #1">Item #1</li>
+                            <div>Team #1 Shirt</div>
+                                <div>$14.99</div>
+                        <li href="Item #2">Item #2</li>
+                            <div>Team #2 Pants with logo</div>
+                                <div>$20.99</div>
+                        <li href="Item #3">Item #3</li>
+                            <div>Team #3 Banner</div>
+                                <div>$10.99</div>
+                        <li href="Item #4">Item #4</li>
+                            <div>Team #4 Hat</div>
+                                <div>$15.99</div>
+                        <li href="Item #5">Item #5</li>
+                            <div>Team #5 Keychain</div>
+                                <div>$5.99</div>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="container">
+                        <p>Stay refreshed for the grind</p>
+                        <img src="{% static 'celciusimage.webp' %}" alt="Celcuis Bottle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
