@@ -57,44 +57,65 @@
         </nav>
     </header>
 
-    <div class="rightcol">
+    <!-- <div class="rightcol">
         <p>Whatever ads you want</p>
-    </div>
+    </div> -->
 
-    <main class="container midcol">
-        <ul>
-            <h2>Popular Streamers:</h2>
-            
-            <h4>CaseOh</h4>
-            <div class="d-flex justify-content-center">
-                <iframe width="400" height="300" src="https://www.youtube.com/embed/bokU-oZEFos" title="CASE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <p>Twitch Stream: <a href="https://www.twitch.tv/caseoh_">Caseoh_</a></p>
+    <section class="p-5 bg-black">
+        <div class="container bg-black">
+            <div class="row">
+                    <main class="container midcol bg-black text-lg-center">
+                        <ul>
+                            <h2 class="text-white">Popular Streamers:</h2>
 
-            <h4>Jynzxi</h4>
-            <div class="d-flex justify-content-center">
-                <iframe width="400" height="300" src="https://www.youtube.com/embed/aGnYseCtlfE" title="JYNXZI frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="col">
+                                <h4 class="text-white">CaseOh</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/bokU-oZEFos" title="CASE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/caseoh_">Caseoh_</a></p>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="text-white">Jynzxi</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/aGnYseCtlfE" title="JYNXZI frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/jynxzi">jynxzi</a></p>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="text-white">Kai Cenat</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/vNeCk2v6PsA" title="KAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/kaicenat">Kai Cenat</a></p>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="text-white">Pokimane</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/nFsBIhoTQ50" title="POKI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/pokimane">Pokimane</a></p>
+                            </div>
+                            
+                            <div class="col">
+                                <h4 class="text-white">Aztec Gaming</h4>
+                                    <img src="{% static 'esports/SDSU controller.png' %}" alt="" class="center-image">
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/aztec_gaming/about">Aztec Gaming</a></p>
+                            </div>
+                        </ul>
+                    </main>
             </div>
-            <p>Twitch Stream: <a href="https://www.twitch.tv/jynxzi">jynxzi</a></p>
-            
-            <h4>Kai Cenat</h4>
-            <div class="d-flex justify-content-center">
-                <iframe width="400" height="300" src="https://www.youtube.com/embed/vNeCk2v6PsA" title="KAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <p>Twitch Stream: <a href="https://www.twitch.tv/kaicenat">Kai Cenat</a></p>
-            
-            <h4>Pokimane</h4>
-            <div class="d-flex justify-content-center">
-                <iframe width="400" height="300" src="https://www.youtube.com/embed/nFsBIhoTQ50" title="POKI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <p>Twitch Stream: <a href="https://www.twitch.tv/pokimane">Pokimane</a></p>
-            
-            <h4>Aztec Gaming</h4>
-            <img src="{% static 'esports/SDSU controller.png' %}" alt="" class="center-image">
-            <p>Twitch Stream: <a href="https://www.twitch.tv/aztec_gaming/about">Aztec Gaming</a></p>
-            
-        </ul>
-    </main>
+            <!-- <div class="row">
+                <img src="{% static 'esports/poptart_ad.jpg' %}" alt="Poptart Ad" class="img-fluid">
+                <p class="text-white text-center lead my-4"> Eat Responsibly &copy; Kellog Co.</p>
+            </div> -->
+        </div>
+    </section>
+
+
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -103,14 +124,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="loginForm">
+                    <form>
                         <div class="mb-3">
                             <label for="username" class="form-label">Username:</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
+                            <input type="text" class="form-control" id="username" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <input type="password" class="form-control" id="password" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Log In</button>
                     </form>
@@ -118,36 +139,6 @@
             </div>
         </div>
     </div>
-    
-    <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const formData = {
-            username: document.getElementById('username').value,
-            password: document.getElementById('password').value
-        };
-    
-        fetch('/api/login/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.access) {
-                localStorage.setItem('accessToken', data.access);
-                localStorage.setItem('refreshToken', data.refresh);
-                window.location.href = '/profile'; // Redirect to the profile page or wherever needed
-            } else {
-                alert('Invalid credentials or some error occurred');
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-    </script>
     <!-- Include Bootstrap JavaScript -->
     <footer class="mt-5">
         <p>&copy; 2024 SDSU ESports Team. All rights reserved.</p>
