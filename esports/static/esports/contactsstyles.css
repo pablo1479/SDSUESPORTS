@@ -158,7 +158,7 @@ footer {
 
 .modal-body input[type="text"],
 .modal-body input[type="password"],
-modal-body textarea {
+.modal-body textarea {
     background-color: #f8f9fa;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -179,4 +179,5 @@ modal-body textarea {
     background-color: rgba(233, 28, 28, 0.8);
     color: white;
 }
+
 

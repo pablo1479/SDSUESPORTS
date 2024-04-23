@@ -17,6 +17,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">SDSU ESports</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -32,7 +33,7 @@
                             <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Registration</a>
+                            <a class="nav-link" href="{% url 'register_form' %}">Registration</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'application' %}">Application</a>
@@ -50,7 +51,6 @@
                             <a class="nav-link" href="{% url 'stream' %}">Stream</a>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
         </nav>
@@ -58,7 +58,7 @@
 
     <main>
         <div class="container">
-            <form>
+            <form id="registrationForm" method="POST" action="/api/register/">
                 <label for="Fname">First Name:</label>
                 <input type="text" id="Fname" name="Fname" required>
 
@@ -96,14 +96,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="loginForm">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username:</label>
-                            <input type="text" class="form-control" id="username" required>
+                            <input type="text" class="form-control" id="username" name="username" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" required>
+                            <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Log In</button>
                     </form>
@@ -112,6 +112,69 @@
         </div>
     </div>
     
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = {
+            first_name: document.getElementById('Fname').value,
+            last_name: document.getElementById('Lname').value,
+            email: document.getElementById('Semail').value,
+            password: document.getElementById('Pword').value,
+            student_id: document.getElementById('Sid').value,
+            twitch: document.getElementById('Twitch').value
+        };
+
+        fetch('/api/register/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('Registration successful');
+                window.location.href = '/profile'; // Redirect to login page or anywhere else
+            } else {
+                alert('Registration failed: ' + data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
+    </script>
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const formData = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+        
+            fetch('/api/login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.access) {
+                    localStorage.setItem('accessToken', data.access);
+                    localStorage.setItem('refreshToken', data.refresh);
+                    window.location.href = '/profile'; // Redirect to the profile page or wherever needed
+                } else {
+                    alert('Invalid credentials or some error occurred');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
     <!-- Include Bootstrap JavaScript -->
     <script src="{% static 'esports/registration.jsx' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

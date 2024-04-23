@@ -155,3 +155,20 @@ input[type="submit"]:hover {
     background-color: rgba(233, 28, 28, 0.8); /* Hover effect to match navbar links */
     color: white; /* Maintain contrast */
 }
+
+/* Apply black background to the "Login" and "Add Member" buttons */
+.navbar .btn-primary {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Change hover effect for the "Login" and "Add Member" buttons */
+.navbar .btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+

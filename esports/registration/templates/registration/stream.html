@@ -34,7 +34,7 @@
                             <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Registration</a>
+                            <a class="nav-link" href="{% url 'register_form' %}">Registration</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'application' %}">Application</a>
@@ -57,29 +57,65 @@
         </nav>
     </header>
 
-    <!-- For right column for ad space -->
-    <div class="rightcol">
+    <!-- <div class="rightcol">
         <p>Whatever ads you want</p>
-    </div>
+    </div> -->
 
-    <main class="container midcol">
-        <ul>
-            <li>Twitch Stream:
-                <iframe width="300" height="450"
-                    src="https://www.twitch.tv/caseoh_" autoplay controls>
-                </iframe>
-            </li>
-            <p>#1 Streamer</p>
-            <li>Twitch Stream: <a href="https://www.twitch.tv/jynxzi">Stream2</a></li>
-            <p>#2 Streamer</p>
-            <li>Twitch Stream: <a href="https://www.twitch.tv/kaicenat">Stream3</a></li>
-            <p>#3 Streamer</p>
-            <li>Twitch Stream: <a href="https://www.twitch.tv/pokimane">Stream4</a></li>
-            <p>#4 Streamer</p>
-            <li>Twitch Stream: <a href="https://www.twitch.tv/aztec_gaming/about">Stream5</a></li>
-            <p>#5 Streamer</p>
-        </ul>
-    </main>
+    <section class="p-5 bg-black">
+        <div class="container bg-black">
+            <div class="row">
+                    <main class="container midcol bg-black text-lg-center">
+                        <ul>
+                            <h2 class="text-white">Popular Streamers:</h2>
+
+                            <div class="col">
+                                <h4 class="text-white">CaseOh</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/bokU-oZEFos" title="CASE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/caseoh_">Caseoh_</a></p>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="text-white">Jynzxi</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/aGnYseCtlfE" title="JYNXZI frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/jynxzi">jynxzi</a></p>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="text-white">Kai Cenat</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/vNeCk2v6PsA" title="KAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/kaicenat">Kai Cenat</a></p>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="text-white">Pokimane</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <iframe width="400" height="300" src="https://www.youtube.com/embed/nFsBIhoTQ50" title="POKI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/pokimane">Pokimane</a></p>
+                            </div>
+                            
+                            <div class="col">
+                                <h4 class="text-white">Aztec Gaming</h4>
+                                    <img src="{% static 'esports/SDSU controller.png' %}" alt="" class="center-image">
+                                <p class="text-white">Twitch Stream: <a href="https://www.twitch.tv/aztec_gaming/about">Aztec Gaming</a></p>
+                            </div>
+                        </ul>
+                    </main>
+            </div>
+            <!-- <div class="row">
+                <img src="{% static 'esports/poptart_ad.jpg' %}" alt="Poptart Ad" class="img-fluid">
+                <p class="text-white text-center lead my-4"> Eat Responsibly &copy; Kellog Co.</p>
+            </div> -->
+        </div>
+    </section>
+
+
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
